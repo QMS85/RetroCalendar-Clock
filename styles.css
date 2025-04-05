@@ -1,0 +1,172 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock-container, .calendar-container, .todo-container {
+    text-align: center;
+    background: #000;
+    padding: 20px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.neon-text {
+    font-size: 2rem;
+    color: #39ff14;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
+}
+
+#time {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+#date {
+    font-size: 1.5rem;
+}
+
+.neon-button {
+    background: #39ff14;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.neon-button:hover {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header #month-year {
+    font-size: 1.5rem;
+}
+
+.calendar-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.dates div {
+    padding: 10px;
+    border: 1px solid #fff;
+    margin: 2px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.dates div:hover {
+    background: #39ff14;
+    color: #000;
+    transform: scale(1.1);
+    text-shadow: none;
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.todo-container input, .todo-container button {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.todo-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-container li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.todo-container li:hover {
+    background: #39ff14;
+    color: #000;
+}
+
+.todo-container button {
+    background: #39ff14;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.todo-container button:hover {
+    background: #fff;
+    color: #000;
+    text-shadow: none;
+}
+
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14;
+    }
+    to {
+        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14, 0 0 80px #39ff14, 0 0 160px #39ff14;
+    }
+}
+
+@keyframes neon-flicker {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.85;
+    }
+}
