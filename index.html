@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Clock and Calendar with Alarms and To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock-container">
+            <div class="clock">
+                <div id="time" class="neon-text"></div>
+                <div id="date" class="neon-text"></div>
+            </div>
+            <div class="alarm-container">
+                <input type="time" id="alarm-time">
+                <button id="set-alarm" class="neon-button">Set Alarm</button>
+                <div id="alarm-message" class="neon-text"></div>
+            </div>
+            <div class="stopwatch-container">
+                <div id="stopwatch" class="neon-text">00:00:00</div>
+                <button id="start-stopwatch" class="neon-button">Start</button>
+                <button id="stop-stopwatch" class="neon-button">Stop</button>
+                <button id="reset-stopwatch" class="neon-button">Reset</button>
+            </div>
+        </div>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev" class="neon-button">&lt;</button>
+                <div id="month-year" class="neon-text"></div>
+                <button id="next" class="neon-button">&gt;</button>
+            </div>
+            <div class="calendar-body">
+                <div class="days">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div id="dates" class="dates"></div>
+            </div>
+        </div>
+        <div class="todo-container">
+            <h2 class="neon-text">To-Do List</h2>
+            <input type="text" id="new-todo" placeholder="Add new task">
+            <button id="add-todo" class="neon-button">Add</button>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
