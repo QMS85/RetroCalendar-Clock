@@ -16,7 +16,7 @@ body {
     align-items: center;
 }
 
-.clock-container, .calendar-container, .todo-container {
+.clock-container, .calendar-container {
     text-align: center;
     background: #000;
     padding: 20px;
@@ -26,6 +26,11 @@ body {
     margin-bottom: 20px;
     animation: neon-flicker 1.5s infinite alternate;
 }
+
+.todo-container {
+    text-algn: right;
+}
+
 
 .neon-text {
     font-size: 2rem;
