@@ -27,7 +27,7 @@ body {
     animation: neon-flicker 1.5s infinite alternate;
 }
 
-.todo-container {
+.todo-container, stopwatch-container {
     text-algn: right;
 }
 
